@@ -14,7 +14,7 @@ import com.example.watchu.R;
 import com.example.watchu.util.SharedPreferencesUtil;
 
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
 
     private Handler handler=new Handler(){
         @Override
@@ -23,7 +23,7 @@ public class SplashActivity extends AppCompatActivity {
             next();
         }
     };
-    private SharedPreferencesUtil sp;
+
 
     private void next() {
         Intent intent=null;
@@ -42,7 +42,6 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        sp = SharedPreferencesUtil.getInstance(getApplicationContext());
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {

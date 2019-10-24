@@ -6,19 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
 
+import com.example.watchu.Activity.BaseActivity;
 import com.example.watchu.Activity.LoginActivity;
 import com.example.watchu.util.Constants;
 import com.example.watchu.util.SharedPreferencesUtil;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
-    private SharedPreferencesUtil sp;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        sp = SharedPreferencesUtil.getInstance(getApplicationContext());
     }
 
     public void onLogoutclick(View view) {

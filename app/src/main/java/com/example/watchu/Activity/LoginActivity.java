@@ -12,11 +12,10 @@ import com.example.watchu.util.RegexUtil;
 import android.content.Intent;
 import  com.example.watchu.util.SharedPreferencesUtil;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
-
+public class LoginActivity extends BaseActivity implements View.OnClickListener {
+                                   //BaseActivity里面的setContentView中已经定义了sp及其意义，所以子类可以直接使用
     private EditText et_username;
     private EditText et_password;
-    private SharedPreferencesUtil sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         bt_login.setOnClickListener(this);
 
-        sp = SharedPreferencesUtil.getInstance(getApplicationContext());
     }
 
     @Override
