@@ -5,13 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="@dimen/container_margin"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="435dp"></androidx.recyclerview.widget.RecyclerView>
+
     <Button
-        android:layout_marginTop="430dp"
+        android:id="@+id/outBut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onLogoutclick"
-        android:text="退出登陆">
-    </Button>
+        android:text="退出登陆"></Button>
 </LinearLayout>
